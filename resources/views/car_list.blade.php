@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">{{ __('Автомобили пользователя') }}</div>
                 <div class="card-body">
-                <h2 class="text-center">{{$listHead}}</h2>
+                <h2 class="text-center">Список автомобилей</h2>
                 <div>
                 <a href="{{ route('car.create') }}"><button class="btn btn-info m-1">Добавить</button></a>
                 </div>
@@ -15,7 +15,7 @@
                 <a href="/api/user"><button class="btn btn-info m-1">Посмотреть Api пользователя</button></a>
                 </div>
 
-                @foreach($listCars as $car)
+                @foreach($cars as $car)
                 <div class="card m-1 p-1">
                     <p class="text-center">ID: {{$car-> id}}</p>
                     <p class="text-center">Бренд: {{$car-> brand}}</p>

@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">{{ __('Автомобили пользователя') }}</div>
                 <div class="card-body">
-                <h2 class="text-center">{{$addCars}}</h2>
+                <h2 class="text-center">Добавления автомобиля</h2>
                 <form action="{{ route('cars.store')}} " method="post">
                 @csrf
                 <div class="form-grup mb-3">

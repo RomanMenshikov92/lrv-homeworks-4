@@ -14,10 +14,9 @@ class CarController extends Controller
      */
     public function index()
     {
-        $objList = Car::all();
+        $cars = Car::all();
         return view('car_list', [
-            'listCars'=> $objList,
-            'listHead'=> 'Содержимое таблицы cars:'
+            'cars' => $cars
         ]);
     }
 
@@ -26,7 +25,7 @@ class CarController extends Controller
      */
     public function create()
     {
-        return view('car_add', ['addCars'=> 'Добавить новое авто']);
+        return view('car_add');
     }
 
     /**
@@ -64,7 +63,7 @@ class CarController extends Controller
     public function update(CarRequest $request, Car $cars)
     {
         $cars-> fill($request-> validate());
-        return $cars-> save();
+        return $cars->save();
     }
 
     /**
